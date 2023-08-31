@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/fullpage.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/MotionPathPlugin.min.js"></script>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/fullpage.js"></script>
+    <script src="./js/custom.js"></script>
+
+</head>
+
+<body>
+    <main id="Main_content">
+        <section class="section">
+            <section class="section main">
+                <video src="./images/video.mp4" autoplay muted loop playsinline>
+
+                </video>
+                <div class="inner">
+                    <div class="text">
+                        portfolio
+                    </div>
+                </div>
+
+            </section>
+        </section>
+        <section class="section">
+            2
+        </section>
+
+        <section id="slide" class="section">
+            <div class="slide text_s"> Slide 1 </div>
+            <div class="slide text_s"> Slide 2 </div>
+            <div class="slide text_s"> Slide 3 </div>
+            <div class="slide text_s"> Slide 4 </div>
+        </section>
+        <section class="section">
+            <div class="bgc02 pra"></div>
+            <div class="text">M </div>
+
+        </section>
+
+    </main>
+    <script>
+        const txt = gsap.utils.toArray('.text');
+
+        txt.forEach((it, idx, arry) => {
+            const a = it.innerText;
+            const t = [...a].map(it => `<span>${it}</span>`).join('');
+
+            it.innerHTML = t;
+            const chars = it.querySelectorAll('span');
+
+            gsap.from(chars, {
+                yPercent: 100,
+                autoAlpha: 0,
+                duration: 1,
+                repeat: 3,
+                repeatDelay: 2,
+                //yoyo: true,
+                ease: "bounce",
+                stagger: {
+                    amount: 1,
+                    from: "random"
+                },
+                scrollTrigger: {
+                    trigger: it,
+                    start: "top center",
+                    //end: "+=400",
+                    toggleActions: "play none play reverse",
+                    markers: 1
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
