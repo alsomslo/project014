@@ -18,11 +18,7 @@ body {
 
 .main {
     position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
 }
 
 .main video {
@@ -44,34 +40,33 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
 
-    background: #fff no-repeat left top;
+
+
     color: #fff;
     -webkit-background-clip: text;
     text-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-    line-height: 0.52;
+
 }
 
 .text span {
 
     font-family: 'Roboto', sans-serif;
     font-size: 7vw;
-    font-weight: 900;
+    font-weight: 500;
+    line-height: 1.2;
 
 }
+
 
 .text span:nth-child(1),
 .text span:nth-child(2),
 .text span:nth-child(3),
-.text span:nth-child(4) {
-    font-size: 15vw;
+.text span:nth-child(4),
+.text span:nth-child(5) {
+    font-size: 12vw;
 }
 
-body {
-    /* background: url(./img/pbg01.jpg) !important; */
-    background-size: 500px;
-    height: 500px;
-    background-repeat: top center;
-}
+
 
 #slide {
     /* background: url(img/pbg01.jpg) no-repeat center top; */
@@ -133,3 +128,216 @@ body {
         transform: translateY(-100px);
     }
 }
+
+.page01 {
+    background: #000;
+}
+
+
+.page03 {}
+
+.page02 {}
+
+.page03 .box {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    justify-content: space-around;
+    align-items: center;
+    border: 0;
+    border-radius: 50px;
+    max-height: 650px;
+    max-width: 1400px;
+    height: 100%;
+    width: 100%;
+    padding: 0 70px;
+    margin: 0 auto;
+
+    background: rgba(0, 0, 0, 0.05);
+
+
+}
+
+.page03 .content {
+    flex: 1;
+}
+
+.page03 .text_s01 {
+    color: #f9f9f9;
+    background: linear-gradient(-45deg, #a1c4fd 50%, #c2e9fb 70%);
+}
+
+.page03 .text_s02 {
+    color: #f9f9f9;
+    background: linear-gradient(-45deg, rgba(66, 230, 150, 1) 50%, rgba(59, 179, 184, 1) 75%);
+}
+
+.page03 .text_s03 {
+    color: #000;
+    background: linear-gradient(-45deg, #000 10%, #fff 60%);
+}
+
+.page03 .text_s04 {
+    color: #f9f9f9;
+    background: linear-gradient(-45deg, #ffd1ff 30%, #fad0c4 70%), #e9b0a0 20%;
+}
+
+.page03 .text_s05 {
+    color: #000;
+    background: linear-gradient(-45deg, #999 10%, #fff 60%);
+}
+
+
+
+
+.page03 .port_img img {
+    transform: translate(0, 0);
+    transition: 3s;
+}
+
+.page03 .port_img:hover img {
+    transform: translate(0, calc(-100% + 460px));
+    transition: 3s;
+}
+
+.page03 .tt {
+    display: block;
+    margin: 0 0 10px 0;
+}
+
+
+
+.page03 .port_img {
+    height: 500px;
+    width: 600px;
+    overflow: hidden;
+    border: 20px solid #f9f9f9;
+    border-radius: 20px;
+
+}
+
+.page03 .tit {
+
+    width: 500px;
+}
+
+.page03 .tit h2 {
+
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+}
+
+.page03 .tit ul>li {
+    display: flex;
+    margin: 0 0 15px 0;
+
+
+
+}
+
+.page03 .tit strong {
+    display: block;
+    font-weight: 500;
+    width: 150px;
+}
+
+.page03 .tit>ul>li span {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.page03 .bt a {
+    display: block;
+    width: 180px;
+    margin: 30px 0 0 0;
+    border: 1px solid #f9f9f9;
+    padding: 15px 0;
+    text-align: center;
+    transition: 0.3s;
+
+}
+
+.page03 .text_s05 .bt a {
+    border: 1px solid #999;
+}
+
+.page03 .text_s03 .bt a {
+    border: 1px solid #999;
+}
+
+.page03 .bt a:hover {
+    background: #000;
+    color: #fff;
+    border: none;
+}
+
+.page03 .m_box {
+    position: relative;
+}
+
+.page03 .m_box figure {
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    transform: translate(-50%, 20%);
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+    border: 20px solid #f9f9f9;
+    border-radius: 30px;
+
+}
+
+.page03 .m_box img {
+    transform: translate(0, 0);
+    transition: 2s;
+}
+
+.page03 .m_box:hover img {
+    transform: translate(0, calc(-100% + 460px));
+    transition: 2s;
+}
+
+.page03 .m_box figure {}
+
+
+/* 
+#app {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#app {
+    overflow: hidden;
+    touch-action: pan-up;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
+}
+
+#app h1 {
+    --fontSize: 60px;
+    --lineHeight: 80px;
+    width: auto;
+    height: calc(2 * var(--lineHeight));
+    line-height: var(--lineHeight);
+    margin: calc(50vh - var(--lineHeight)) auto 0;
+    font-size: var(--fontSize);
+}
+
+#app a {
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+
+#app canvas {
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+} */

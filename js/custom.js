@@ -1,4 +1,7 @@
 
+
+
+
 $(function () {
     var sNap = false;
     var secL = $(".section").length;
@@ -59,3 +62,6 @@ $(function () {
         }
     });
 });
+
+
+
